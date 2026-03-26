@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-    // TYPING
-    const text = "Future Software Engineer | Java & Web Developer";
+    // 🔥 TYPING EFFECT (More Professional)
+    const text = "Information Science Engineering Student | Java | Data Structures | Web Developer";
     let i = 0;
 
     function typingEffect() {
@@ -13,8 +13,15 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     typingEffect();
 
-    // SKILLS
-    const skills = ["HTML", "CSS", "Java", "DSA"];
+    // 🔥 SKILLS (Better Order for Recruiters)
+    const skills = [
+        "Java",
+        "Data Structures (Learning)",
+        "HTML",
+        "CSS",
+        "Git & GitHub"
+    ];
+
     const skillsList = document.getElementById("skills-list");
 
     skills.forEach(skill => {
@@ -23,13 +30,14 @@ document.addEventListener("DOMContentLoaded", function(){
         skillsList.appendChild(li);
     });
 
-    // PROJECTS
+    // 🔥 PROJECTS (Improved Description + GitHub Link)
     const projects = [
         {
-            title: "Elder Caregiver Dashboard",
-            desc: "A dashboard to help elderly users access essential services easily."
+            title: "Elder Dashboard",
+            desc: "A web-based dashboard designed to assist elderly users in managing daily activities such as reminders and accessing essential information through a simple and user-friendly interface.",
+            link: "https://github.com/simra2580"
         }
-      ];
+    ];
 
     const projectContainer = document.getElementById("projects");
 
@@ -40,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function(){
         div.innerHTML = `
             <h3>${p.title}</h3>
             <p>${p.desc}</p>
+            <a href="${p.link}" target="_blank" class="btn">View on GitHub</a>
         `;
 
         projectContainer.appendChild(div);
@@ -47,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 
-// DARK MODE
+// 🌙 DARK MODE
 function toggleTheme(){
     document.body.classList.toggle("dark");
 }
