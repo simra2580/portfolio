@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-    // 🔥 TYPING EFFECT (More Professional)
     const text = "Information Science Engineering Student | Java | Data Structures | Web Developer";
     let i = 0;
 
@@ -13,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     typingEffect();
 
-    // 🔥 SKILLS (Better Order for Recruiters)
     const skills = [
         "Java",
         "Data Structures (Learning)",
@@ -30,11 +28,10 @@ document.addEventListener("DOMContentLoaded", function(){
         skillsList.appendChild(li);
     });
 
-    // 🔥 PROJECTS (Improved Description + GitHub Link)
     const projects = [
         {
             title: "Elder Dashboard",
-            desc: "A web-based dashboard designed to assist elderly users in managing daily activities such as reminders and accessing essential information through a simple and user-friendly interface.",
+            desc: "A web-based dashboard to assist elderly users in managing daily activities with a simple and accessible interface.",
             link: "https://github.com/simra2580"
         }
     ];
@@ -56,7 +53,19 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 
-// 🌙 DARK MODE
 function toggleTheme(){
     document.body.classList.toggle("dark");
 }
+// SCROLL ANIMATION
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        const trigger = window.innerHeight * 0.85;
+
+        if(top < trigger){
+            section.classList.add("show");
+        }
+    });
+});
